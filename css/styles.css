@@ -115,7 +115,11 @@ header {
 }
 /* studio - sekcja główna */
 .hero {
+  max-width: 1440px;
   background-color: var(--navy-blue, #2e2f42);
+  background-image: url(../images/hero.jpg);
+  background: var(--grey, rgba(46, 47, 66, 0.7));
+
   text-align: center;
 }
 
@@ -174,6 +178,18 @@ h3 {
   width: 264px;
   flex-direction: column;
   align-items: flex-start;
+}
+.feature-icons {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  background: var(--cloud, #f4f4fd);
+  margin-bottom: 8px;
+}
+.feature-icons-item {
+  width: 64px;
+  height: 64px;
+  margin: 24px 100px;
 }
 /* studio - sekcja What Are We Doing */
 h2 {
@@ -235,6 +251,28 @@ p {
   color: var(--slate, #434455);
   line-height: 1.5;
   letter-spacing: 0.32px;
+}
+/* studio - sekcja Customers */
+.customers {
+  padding-top: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.customers-icons {
+  width: 168px;
+  height: 88px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid var(--lightslate, #8e8f99);
+}
+.customers-icons-item {
+  width: 104px;
+  height: 56px;
+  flex-shrink: 0;
+  margin: 16px 32px;
 }
 /* Stopka */
 .footer-class {
