@@ -6,6 +6,7 @@
   --cornflower: #e7e9fc;
   --ocean: #404bbf;
   --white: #ffffff;
+  --green: #31d0aa;
 }
 html {
   overflow: auto;
@@ -117,9 +118,12 @@ header {
 .hero {
   max-width: 1440px;
   background-color: var(--navy-blue, #2e2f42);
-  background-image: url(../images/hero.jpg);
-  background: var(--grey, rgba(46, 47, 66, 0.7));
-
+  background-image: linear-gradient(
+      to bottom,
+      var(--grey, rgba(46, 47, 66, 0.7)),
+      var(--grey, rgba(46, 47, 66, 0.7))
+    ),
+    url(../images/hero.jpg);
   text-align: center;
 }
 
@@ -252,6 +256,31 @@ p {
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
+.sm-team-links {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.team-sm {
+  background-color: var(--iris);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.team-sm-item {
+  margin: 12px;
+  width: 16px;
+  height: 16px;
+}
+.team-sm:hover,
+.team-sm:focus {
+  background-color: var(--ocean, #404bbf);
+}
+
 /* studio - sekcja Customers */
 .customers {
   padding-top: 72px;
@@ -269,11 +298,17 @@ p {
   border: 1px solid var(--lightslate, #8e8f99);
 }
 .customers-icons-item {
+  fill: #8e8f99;
   width: 104px;
   height: 56px;
   flex-shrink: 0;
   margin: 16px 32px;
 }
+.customers-icons-item:hover,
+.customers-icons-item:focus {
+  fill: #404bbf;
+}
+
 /* Stopka */
 .footer-class {
   background-color: var(--navy-blue, #2e2f42);
@@ -291,7 +326,7 @@ p {
   letter-spacing: 0.54px;
   text-transform: uppercase;
 }
-.footer-tekst {
+.footer-text {
   color: var(--cloud, #f4f4fd);
   font-size: 16px;
   line-height: 1.5;
@@ -301,9 +336,49 @@ p {
   padding-top: 16px;
   padding-bottom: 100px;
 }
+
 .link-footer {
   text-decoration: none;
 }
+.footer-list ul {
+  display: inline-flex;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 120px;
+}
+.footer-sm {
+  display: block;
+  flex-direction: column;
+}
+.sm-text {
+  color: var(--white, #fff);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  margin-top: 100;
+  padding-bottom: 16px;
+}
+.sm {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.sm-icons {
+  background-color: var(--iris);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.sm-icons-item {
+  margin: 8px;
+  width: 24px;
+  height: 24px;
+}
+.sm-icons:focus,
+.sm-icons:hover {
+  background-color: var(--green, #31d0aa);
+}
+
 /* portfolio - sekcja nawigacji*/
 .navi-button {
   display: flex;
@@ -352,6 +427,11 @@ p {
   border-bottom: 1px solid var(--cornflower, #e7e9fc);
   border-right: 1px solid var(--cornflower, #e7e9fc);
   background: var(--white, #fff);
+}
+.project-name:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .project-margin {
   margin-top: -120px;
