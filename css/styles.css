@@ -308,7 +308,10 @@ p {
 .customers-icons-item:focus {
   fill: #404bbf;
 }
-
+.customers-icons:focus,
+.customers-icons:hover {
+  border: 1px solid #404bbf;
+}
 /* Stopka */
 .footer-class {
   background-color: var(--navy-blue, #2e2f42);
