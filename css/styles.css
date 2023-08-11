@@ -232,19 +232,20 @@ h2 {
 .team-header {
   padding-bottom: 72px;
 }
-.team-item {
-  display: inline-flex;
-  justify-content: center;
-  flex-shrink: 0;
-  gap: 24px;
-}
-.team-item li {
+.team-item-box {
   background-color: var(--white, #ffffff);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+.team-item {
+  display: inline-flex;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 24px;
+}
+
 .team-item-name {
   padding-top: 32px;
   padding-bottom: 32px;
